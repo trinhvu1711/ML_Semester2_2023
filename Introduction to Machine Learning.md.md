@@ -1,12 +1,14 @@
-# Machine Learning 2023
+## Introduction to Machine Learning
 
-Tóm tắt kiến thức Machine Learning
-
-## 1. Introduction to Machine Learning
+### What is Machine Learning?
 
 Machine learning (học máy) là một lĩnh vực trong trí tuệ nhân tạo (AI) tập trung vào việc phát triển các thuật toán và mô hình máy tính có khả năng tự học và cải thiện hiệu suất theo thời gian. Phương pháp này cho phép máy tính "học" từ dữ liệu mà không cần được lập trình một cách cụ thể.
 
+### Machine Learning Types
+
 Có hai loại chính của machine learning: học có giám sát (supervised learning) và học không có giám sát (unsupervised learning). Trong học có giám sát, mô hình được huấn luyện bằng cách cung cấp cho nó các cặp dữ liệu đầu vào và đầu ra mong muốn, để nó có thể học cách ánh xạ từ đầu vào tới đầu ra. Trong học không có giám sát, mô hình phải tìm ra cấu trúc và mô hình dữ liệu mà không có thông tin về đầu ra mong muốn.
+
+### Machine Learning Algorithms
 
 Các thuật toán machine learning phổ biến bao gồm:
 
@@ -15,29 +17,22 @@ Các thuật toán machine learning phổ biến bao gồm:
 - Học không giám sát: Các thuật toán như Phân cụm K-means (K-means Clustering), Phân cấp (Hierarchical Clustering), Mô hình hỗn hợp Gaussian (Gaussian Mixture Models - GMM), và Phân tích thành phần chính (Principal Component Analysis - PCA).
 
 - Học sâu (Deep Learning): Học sâu là một lĩnh vực con của machine learning, tập trung vào việc xây dựng và huấn luyện các mạng nơ-ron sâu (deep neural networks) có khả năng học và trích xuất đặc trưng tự động từ dữ liệu. Các kiến trúc phổ biến trong học sâu bao gồm Mạng nơ-ron tích chập (Convolutional Neural Networks - CNN) cho xử lý hình ảnh, Mạng nơ-ron tuần tự (Recurrent Neural Networks - RNN) cho xử lý dữ liệu chuỗi, và Mô hình Transformer cho xử lý ngôn ngữ tự nhiên.
+
 - Học tăng cường (Reinforcement Learning): Học tăng cường là một phương pháp học trong đó một hệ thống tương tác với môi trường và tự động học từ kinh nghiệm thông qua việc nhận phần thưởng hoặc hình phạt. Thuật toán nổi tiếng trong học tăng cường là Q-learning và Deep Q-Networks (DQN).
+
+### Applications of Machine Learning
 
 Để áp dụng machine learning, quá trình bao gồm các bước sau:
 
 - Chuẩn bị dữ liệu: Tiền xử lý dữ liệu, bao gồm việc loại bỏ dữ liệu nhiễu, xử lý dữ liệu thiếu, và chia dữ liệu thành tập huấn luyện và tập kiểm tra.
+
 - Chọn và huấn luyện mô hình: Chọn một thuật toán phù hợp và huấn luyện mô hình trên tập dữ liệu huấn luyện. Quá trình này bao gồm tối ưu hóa các thông số và tham số của mô hình để đạt được hiệu suất tốt nhất.
+
 - Đánh giá mô hình: Sử dụng tập dữ liệu kiểm tra để đánh giá hiệu suất của mô hình. Đánh giá có thể dựa trên các độ đo như độ chính xác (accuracy), độ mất mát (loss), độ F1, hay ma trận nhầm lẫn (confusion matrix) tùy thuộc vào bài toán cụ thể.
+
 - Điều chỉnh và tinh chỉnh: Nếu mô hình không đạt được hiệu suất mong đợi, có thể cần điều chỉnh lại thiết lập hoặc cải tiến quá trình huấn luyện. Điều này có thể bao gồm thay đổi thuật toán, tăng số lượng dữ liệu huấn luyện, hoặc tối ưu hóa tham số.
+
 - Triển khai mô hình: Sau khi mô hình đã đạt được hiệu suất tốt, nó có thể được triển khai để sử dụng trong ứng dụng thực tế. Điều này có thể bao gồm việc tích hợp mô hình vào hệ thống hiện có hoặc phát triển các ứng dụng và dịch vụ mới.
-
-## 2. Regression
-
-Hồi quy (Regression) là một phương pháp trong machine learning (học máy) được sử dụng để dự đoán giá trị của một biến mục tiêu dựa trên các biến đầu vào. Nó giúp tìm hiểu mối quan hệ và ánh xạ giữa các biến để xây dựng một mô hình dự đoán.
-
-Trong hồi quy, chúng ta tìm kiếm một hàm số hoặc mô hình có thể mô tả được mối quan hệ giữa biến đầu vào (x) và biến mục tiêu (y). Mô hình hồi quy cố gắng tìm ra mối quan hệ này bằng cách điều chỉnh các tham số của mô hình để tạo ra dự đoán chính xác nhất có thể.
-
-Có nhiều loại mô hình hồi quy khác nhau, nhưng một trong những mô hình phổ biến là hồi quy tuyến tính (Linear Regression). Trong hồi quy tuyến tính, mô hình dự đoán một giá trị đầu ra liên tục dựa trên một tập hợp các biến đầu vào và trọng số tương ứng với mỗi biến. Mục tiêu là tìm ra bộ trọng số tối ưu để mô hình có thể dự đoán chính xác giá trị đầu ra.
-
-Quá trình huấn luyện một mô hình hồi quy thường bao gồm việc tìm kiếm bộ trọng số tối ưu bằng cách sử dụng phương pháp tối ưu hóa. Phương pháp phổ biến nhất là phương pháp bình phương nhỏ nhất (Least Squares), trong đó chúng ta tìm kiếm bộ trọng số mà giảm thiểu sai số giữa dự đoán và giá trị thực tế.
-
-Sau khi huấn luyện xong, mô hình hồi quy có thể được sử dụng để dự đoán giá trị mới dựa trên các giá trị đầu vào. Đánh giá mô hình thường được thực hiện bằng cách so sánh giữa dự đoán và giá trị thực tế sử dụng các độ đo như sai số trung bình (Mean Squared Error) hay hệ số xác định (Coefficient of Determination).
-
-Hồi quy là một công cụ mạnh mẽ trong machine learning và được sử dụng rộng rãi trong nhiều lĩnh vực như dự đoán giá cổ phiếu, ước tính giá nhà
 
 ## 3. SVM
 
