@@ -90,3 +90,54 @@ Gradient Descent cho hàm 1 biến
 
 Gradient Descent cho hàm nhiều biến
 ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/2a61727c-55ef-4052-8b9a-5fa168190d84)
+
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/ba41bbdb-d979-49cc-85e8-5fdf178473db)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/48b2bcfa-c4e3-4e0b-8580-abf9ac40f8d6)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/cd1c2efc-8d17-4fc6-95e8-6fcddb7d1be7)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/21de629a-e399-4c9d-be2f-b99343178f89)
+
+Overfitting
+Overfitting là hiện tượng xảy ra khi một mô hình học máy quá tập trung vào dữ liệu huấn luyện mà không tổng quát hóa tốt cho dữ liệu mới. Khi một mô hình bị overfitting, nó có khả năng hoạt động tốt trên dữ liệu huấn luyện đã sử dụng để huấn luyện, nhưng không thể dự đoán chính xác trên dữ liệu mới.
+Nguyên nhân chính dẫn đến overfitting:
+- Sự phức tạp quá mức của mô hình: Nếu mô hình có quá nhiều tham số hoặc quá sức mạnh, nó có thể học những chi tiết không cần thiết từ dữ liệu huấn luyện và dẫn đến việc không tổng quát hóa tốt.
+- Kích thước dữ liệu huấn luyện nhỏ: Khi lượng dữ liệu huấn luyện ít, mô hình dễ bị overfitting vì nó có thể học "học thuộc lòng" các mẫu trong tập dữ liệu nhỏ.
+- Không cân bằng giữa số lượng mẫu và số lượng đặc trưng: Nếu số lượng đặc trưng (features) lớn hơn đáng kể so với số lượng mẫu, mô hình có thể học những quy tắc quá cụ thể dựa trên các mẫu hiếm hoặc nhiễu trong dữ liệu huấn luyện.
+Các dấu hiệu của overfitting:
+- Độ chính xác trên tập huấn luyện cao, nhưng độ chính xác trên dữ liệu kiểm tra thấp.
+- Sự dao động lớn trong hiệu suất dự đoán trên các tập dữ liệu khác nhau.
+- Mô hình có xu hướng "học thuộc lòng" các mẫu trong dữ liệu huấn luyện, như việc phân loại hoặc dự đoán chính xác từng mẫu trong tập huấn luyện.
+Cách giảm overfitting:
+- Tăng dữ liệu huấn luyện: Bằng cách thu thập thêm dữ liệu huấn luyện, mô hình có thể học từ một tập dữ liệu lớn và tổng quát hóa tốt hơn.
+- Giảm sự phức tạp của mô hình: Giảm số lượng tham số hoặc sức mạnh của mô hình có thể giúp tránh overfitting. Có thể sử dụng các phương pháp như regularization (như L1 hoặc L2 regularization) để giảm overfitting.
+- Sử dụng kỹ thuật cross-validation: Sử dụng kỹ thuật cross-validation để đánh giá hiệu suất của mô hình trên nhiều tập dữ liệu kiểm tra khác nhau và đảm bảo khả năng tổng quát hóa.
+- Áp dụng kỹ thuật dropout: Kỹ thuật dropout trong mạng neural có thể giúp mô hình học từ các đặc trưng đa dạng và tránh overfitting bằng cách tạm thời loại bỏ ngẫu nhiên một số lượng các đơn vị (neuron) trong quá trình huấn luyện.
+- Sử dụng mô hình ensemble: Kết hợp nhiều mô hình dự đoán để giảm overfitting và cải thiện khả năng tổng quát hóa.
+
+### Logistic regression
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/a0419dfb-8870-45d6-aa89-645c930ab61c)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/c0b968a8-3cf4-406a-93cd-152166de6181)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/562dbc41-dba2-4992-ad63-0f6ff2306587)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/9d08e8d9-2c41-42d1-9965-6960aaa99f62)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/9c3b90cb-50c4-4073-a6fd-eaa6bef0f4e4)
+
+### Model evaluation
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/019fca79-f7d6-46a4-a970-bb25eece0402)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/0f3682ee-d9d6-4fec-aac2-cd67a5998acb)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/c2db1787-a00c-4ed2-b25e-4553e063efcf)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/2e4a57ad-a951-4c4f-9155-c839c3ce7fef)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/b8c62a21-9da3-437a-84d6-6418b261a8cb)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/b93acfb8-7dae-4477-b681-fd68cd48e592)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/0178c829-9f31-4d5c-8bf4-725c26111b90)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/1fd0ba74-9fa1-441a-92a4-836659659880)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/c6999af2-c252-4e60-9e50-28ef3af94af1)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/c2712788-523a-4c5e-bf58-33c0da81d55c)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/4910f8dc-e42f-49b1-a611-8a4824000b3b)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/739e655c-2339-4bfc-8905-37960dad4ae6)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/af39cae4-1ac0-4434-b6d9-5bd80a4b88e9)
+
+
+
+
+
+
+
