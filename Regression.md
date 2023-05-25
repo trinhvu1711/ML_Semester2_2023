@@ -62,3 +62,31 @@ Hồi quy là một công cụ mạnh mẽ trong machine learning và được s
 - Logistic regression
 
 ### Linear regression
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/3c8ee232-7c46-419e-9f18-b77544f4d3c1)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/b87125cd-16b5-471f-a9d5-4be045d810fb)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/ab62bf5d-329e-4ba0-9c81-4e1e5e939586)
+
+Loss Function
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/139cf597-5785-431d-928a-f2e6431c87c1)
+
+Gradient Descent
+Gradient Descent (GD) là một phương pháp tối ưu trong Machine Learning và optimization để tìm giá trị tối ưu của một hàm mục tiêu. Phương pháp này dựa trên việc điều chỉnh các tham số của mô hình dự đoán dựa trên gradient của hàm mục tiêu.
+
+Cách thức hoạt động của Gradient Descent:
+- Khởi tạo các tham số ban đầu: Đầu tiên, các tham số của mô hình được khởi tạo với giá trị ngẫu nhiên hoặc giá trị ban đầu đã cho.
+- Tính gradient: Tiếp theo, gradient của hàm mục tiêu được tính toán đối với các tham số hiện tại. Gradient cho biết hướng tăng nhanh nhất của hàm mục tiêu tại vị trí hiện tại.
+- Cập nhật tham số: Các tham số của mô hình được cập nhật dựa trên gradient và một hệ số learning rate (tỷ lệ học). Công thức cập nhật thường được sử dụng là: tham số mới = tham số cũ - learning rate * gradient.
+- Lặp lại quá trình: Quá trình tính toán gradient và cập nhật tham số được lặp lại cho đến khi đạt được điều kiện dừng, ví dụ như đạt đủ số lần lặp, đạt được độ chính xác mong muốn hoặc hàm mục tiêu không còn thay đổi đáng kể.
+
+Gradient Descent có hai biến thể chính:
+- Batch Gradient Descent (BGD): Trong BGD, toàn bộ tập dữ liệu huấn luyện được sử dụng để tính toán gradient và cập nhật tham số. Điều này có thể làm tăng đáng kể thời gian tính toán, nhất là với các tập dữ liệu lớn.
+
+- Stochastic Gradient Descent (SGD): Trong SGD, gradient và cập nhật tham số được tính toán cho từng mẫu dữ liệu huấn luyện. Điều này giúp giảm thời gian tính toán, nhưng có thể gây ra độ dao động và nhiễu trong quá trình tối ưu.
+
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/c9b1ddc1-90d1-44df-be92-d78fbc254df5)
+
+Gradient Descent cho hàm 1 biến
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/0addbf5d-f07a-4d5a-8a3d-31d119172b7a)
+
+Gradient Descent cho hàm nhiều biến
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/2a61727c-55ef-4052-8b9a-5fa168190d84)
