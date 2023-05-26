@@ -34,20 +34,6 @@ Các thuật toán machine learning phổ biến bao gồm:
 
 - Triển khai mô hình: Sau khi mô hình đã đạt được hiệu suất tốt, nó có thể được triển khai để sử dụng trong ứng dụng thực tế. Điều này có thể bao gồm việc tích hợp mô hình vào hệ thống hiện có hoặc phát triển các ứng dụng và dịch vụ mới.
 
-## 3. SVM
-
-Máy vector hỗ trợ (Support Vector Machines - SVM) là một thuật toán trong machine learning (học máy) được sử dụng để phân loại và hồi quy. Được giới thiệu lần đầu tiên bởi Vapnik và Cortes vào năm 1995, SVM đã trở thành một trong những thuật toán phổ biến và mạnh mẽ trong lĩnh vực này.
-
-Trên cơ bản, SVM tạo ra một siêu phẳng (hyperplane) trong không gian đa chiều, nhằm phân tách các điểm dữ liệu thuộc vào các lớp khác nhau. Mục tiêu của SVM là tìm ra siêu phẳng tốt nhất sao cho khoảng cách từ các điểm dữ liệu gần nhất đến siêu phẳng là lớn nhất. Các điểm dữ liệu gần nhất được gọi là vector hỗ trợ (support vectors).
-
-SVM có thể áp dụng cho các bài toán phân loại nhị phân (binary classification) và đa lớp (multi-class classification), cũng như cho bài toán hồi quy (regression). Trong bài toán phân loại, SVM sử dụng một hàm kernel để ánh xạ dữ liệu vào không gian cao chiều (high-dimensional space), nơi việc phân loại dễ dàng hơn. Một số hàm kernel phổ biến được sử dụng là linear kernel, polynomial kernel và radial basis function (RBF) kernel.
-
-Để huấn luyện một mô hình SVM, chúng ta cần xác định các tham số như loại kernel, hệ số regularization và hệ số kernel trong trường hợp sử dụng kernel. Quá trình tìm ra siêu phẳng tối ưu thường được thực hiện bằng các phương pháp tối ưu hóa như Sequential Minimal Optimization (SMO) hoặc Quadratic Programming (QP).
-
-Sau khi huấn luyện xong, mô hình SVM có thể được sử dụng để phân loại dữ liệu mới hoặc dự đoán giá trị đầu ra trong bài toán hồi quy. Đánh giá mô hình SVM thường được thực hiện bằng cách sử dụng các độ đo như độ chính xác (accuracy), độ phủ (recall), độ chính xác dương tính (precision), và F1-score.
-
-SVM là một thuật toán mạnh mẽ và linh hoạt, có khả năng xử lý các bài toán phân loại phức tạp và dữ liệu không tuyến tính. Nó được áp dụng rộng rãi trong nhiều lĩnh vực như xử lý hình ảnh, nhận dạng văn bản
-
 ## 4. Clustering
 
 Phân cụm (Clustering) là một phương pháp trong machine learning (học máy) được sử dụng để nhóm các điểm dữ liệu có tính chất tương đồng lại với nhau. Mục tiêu của phân cụm là tìm ra cấu trúc ẩn trong dữ liệu mà không cần có nhãn hay thông tin trước.
