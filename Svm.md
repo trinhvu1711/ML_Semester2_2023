@@ -107,3 +107,7 @@ Trong đó:
 - (1/2) \* ||w||^2 là thành phần regularization.
 - C là hệ số điều chỉnh (hyperparameter) để điều chỉnh sự cân bằng giữa thành phần regularization và thành phần loss.
 - Σ[loss(y - f(x))] là tổng các giá trị của hàm loss (ví dụ như hàm mất mát tuyến tính hoặc hàm mất mát epsilon-insensitive) cho các điểm dữ liệu.
+
+Lagrange multipliers
+
+Là một phương pháp trong tối ưu hóa được sử dụng để tìm các giá trị tối ưu của một hàm mục tiêu trong những ràng buộc. Phương pháp này được đặt tên theo nhà toán học người Ý Joseph-Louis Lagrange.
