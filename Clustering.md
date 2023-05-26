@@ -79,6 +79,22 @@ Có một số vấn đề có thể xảy ra khi chọn điểm khởi tạo ba
 
 Để giải quyết vấn đề này, một phương pháp là chạy thuật toán K-means nhiều lần với các điểm khởi tạo ngẫu nhiên khác nhau và chọn kết quả tốt nhất. Một cách khác là sử dụng các phương pháp khởi tạo điểm ban đầu nâng cao như K-means++ để chọn các điểm khởi tạo có phân bố tốt hơn trong không gian dữ liệu.
 
+Cách hoạt động của hierarchical clustering như sau:
+
+Bước khởi tạo: Mỗi điểm dữ liệu được coi là một cụm đơn lẻ.
+
+Tính độ tương đồng: Độ tương đồng giữa các cụm được tính dựa trên một phép đo tương đồng, chẳng hạn như khoảng cách Euclid hay tương tự cosin.
+
+Gom nhóm cụm: Hai cụm có độ tương đồng cao nhất được gom nhóm thành một cụm mới.
+
+Cập nhật ma trận độ tương đồng: Ma trận độ tương đồng được cập nhật để phản ánh quan hệ tương đồng giữa các cụm.
+
+Lặp lại các bước 2-4: Các bước tính độ tương đồng, gom nhóm cụm và cập nhật ma trận độ tương đồng được lặp lại cho đến khi chỉ còn một cụm duy nhất hoặc điều kiện dừng được đáp ứng.
+
+Kết quả của hierarchical clustering là một cây phân cấp (dendrogram), trong đó mỗi nút đại diện cho một cụm và mỗi nhánh đại diện cho sự tương đồng giữa các cụm. Các cụm cuối cùng được chọn dựa trên một ngưỡng độ tương đồng hoặc cắt cây (cutting the tree) để tạo ra số lượng cụm mong muốn.
+
+Hierarchical clustering có hai phương pháp chính: phân cấp trên và phân cấp dưới. Phân cấp trên bắt đầu với mỗi điểm dữ liệu là một cụm và gom nhóm chúng lại thành cụm lớn hơn. Trong khi đó, phân cấp dưới bắt đầu với một cụm lớn và tách thành các cụm con nhỏ hơn.
+
 ### Solutions to Inital Centroids Problem
 
 Có một số giải pháp để khắc phục vấn đề với việc chọn điểm khởi tạo ban đầu trong thuật toán K-means:
@@ -97,9 +113,68 @@ Có một số giải pháp để khắc phục vấn đề với việc chọn 
 ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/73a2cee8-e8bb-45f3-840d-9d17f16574d2)
 
 ## Hierarchical Methods
+Hierarchical clustering là một phương pháp phân cụm trong lĩnh vực học không giám sát, được sử dụng để phân nhóm các điểm dữ liệu thành các cụm dựa trên sự tương đồng giữa chúng. Phương pháp này xây dựng một cây phân cấp (dendrogram) mô tả quan hệ tương đồng giữa các điểm dữ liệu.
+
+Cách hoạt động của hierarchical clustering như sau:
+
+- Bước khởi tạo: Mỗi điểm dữ liệu được coi là một cụm đơn lẻ.
+
+- Tính độ tương đồng: Độ tương đồng giữa các cụm được tính dựa trên một phép đo tương đồng, chẳng hạn như khoảng cách Euclid hay tương tự cosin.
+
+- Gom nhóm cụm: Hai cụm có độ tương đồng cao nhất được gom nhóm thành một cụm mới.
+
+- Cập nhật ma trận độ tương đồng: Ma trận độ tương đồng được cập nhật để phản ánh quan hệ tương đồng giữa các cụm.
+
+- Lặp lại các bước 2-4: Các bước tính độ tương đồng, gom nhóm cụm và cập nhật ma trận độ tương đồng được lặp lại cho đến khi chỉ còn một cụm duy nhất hoặc điều kiện dừng được đáp ứng.
+
+Kết quả của hierarchical clustering là một cây phân cấp (dendrogram), trong đó mỗi nút đại diện cho một cụm và mỗi nhánh đại diện cho sự tương đồng giữa các cụm. Các cụm cuối cùng được chọn dựa trên một ngưỡng độ tương đồng hoặc cắt cây (cutting the tree) để tạo ra số lượng cụm mong muốn.
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/c081853e-373f-4df5-ab30-8d4091fc18c7)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/bf7c46aa-5a34-45d4-82e1-29ca00163016)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/37ced800-e7a6-4e05-88aa-487571f75e60)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/e1414783-6ea9-4649-9f67-0cd884abe224)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/719f5f13-edd3-44ff-aefd-6df4f24f2043)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/4d6147c0-d43f-4cb2-8e61-e0c30d370f26)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/a1790843-506a-4358-a93e-cd81253cbf96)
 
 ## Density-and Grid-Based Methods
+Density-based methods (phương pháp dựa trên mật độ) là một nhóm các phương pháp trong lĩnh vực phân cụm dữ liệu, được sử dụng để phát hiện các cụm dựa trên mật độ của các điểm dữ liệu. Điểm đặc trung chính của phương pháp này là nó dựa vào sự phân bố mật độ của các điểm dữ liệu để xác định các cụm và phát hiện các vùng có mật độ cao trong không gian dữ liệu.
+
+Một trong những phương pháp phân cụm dựa trên mật độ phổ biến nhất là DBSCAN (Density-Based Spatial Clustering of Applications with Noise). DBSCAN xác định các cụm dựa trên việc phát hiện các vùng có mật độ cao trong không gian dữ liệu. Nó xác định các điểm "core points" (điểm trung tâm) dựa trên mật độ xung quanh và mở rộng cụm bằng cách kết hợp các điểm lân cận. Đồng thời, DBSCAN cũng phân loại các điểm "outlier" (điểm ngoại lai) không thuộc vào bất kỳ cụm nào.
+
+Các phương pháp dựa trên mật độ khác bao gồm OPTICS (Ordering Points To Identify the Clustering Structure) và HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise). OPTICS xây dựng một biểu đồ sắp xếp các điểm dữ liệu dựa trên mật độ và khoảng cách, giúp xác định các cụm dựa trên cấu trúc mật độ trong không gian dữ liệu. HDBSCAN là một phương pháp phân cụm dựa trên cấu trúc phân cấp, kết hợp các khía cạnh của DBSCAN và OPTICS để xác định các cụm có mật độ cao và xác định các điểm ngoại lai.
+
+Ưu điểm của các phương pháp dựa trên mật độ là khả năng phát hiện các cụm có hình dạng và kích thước đa dạng, đồng thời cũng linh hoạt với các cụm có mật độ và hình dạng không đều. Tuy nhiên, điểm yếu của phương pháp này là nhạy cảm với các tham số như ngưỡng mật độ và khoảng cách, và có thể khó định nghĩa các tham số này đối với các tập dữ liệu phức tạp.
+
+### Grid-based method
+Density-based methods (phương pháp dựa trên mật độ) là một nhóm các phương pháp trong lĩnh vực phân cụm dữ liệu, được sử dụng để phát hiện các cụm dựa trên mật độ của các điểm dữ liệu. Điểm đặc trung chính của phương pháp này là nó dựa vào sự phân bố mật độ của các điểm dữ liệu để xác định các cụm và phát hiện các vùng có mật độ cao trong không gian dữ liệu.
+
+Một trong những phương pháp phân cụm dựa trên mật độ phổ biến nhất là DBSCAN (Density-Based Spatial Clustering of Applications with Noise). DBSCAN xác định các cụm dựa trên việc phát hiện các vùng có mật độ cao trong không gian dữ liệu. Nó xác định các điểm "core points" (điểm trung tâm) dựa trên mật độ xung quanh và mở rộng cụm bằng cách kết hợp các điểm lân cận. Đồng thời, DBSCAN cũng phân loại các điểm "outlier" (điểm ngoại lai) không thuộc vào bất kỳ cụm nào.
+
+Các phương pháp dựa trên mật độ khác bao gồm OPTICS (Ordering Points To Identify the Clustering Structure) và HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise). OPTICS xây dựng một biểu đồ sắp xếp các điểm dữ liệu dựa trên mật độ và khoảng cách, giúp xác định các cụm dựa trên cấu trúc mật độ trong không gian dữ liệu. HDBSCAN là một phương pháp phân cụm dựa trên cấu trúc phân cấp, kết hợp các khía cạnh của DBSCAN và OPTICS để xác định các cụm có mật độ cao và xác định các điểm ngoại lai.
+
+Ưu điểm của các phương pháp dựa trên mật độ là khả năng phát hiện các cụm có hình dạng và kích thước đa dạng, đồng thời cũng linh hoạt với các cụm có mật độ và hình dạng không đều. Tuy nhiên, điểm yếu của phương pháp này là nhạy cảm với các tham số như ngưỡng mật độ và khoảng cách, và có thể khó định nghĩa các tham số này đối với các tập dữ liệu phức tạp.
 
 ## Evaluation of Clustering
+Để đánh giá hiệu quả của phương pháp phân cụm, có một số phương pháp đánh giá phổ biến được sử dụng. Dưới đây là một số phương pháp đánh giá phổ biến:
+- Đánh giá nội tại (Internal evaluation): Phương pháp này đánh giá chất lượng phân cụm dựa trên các thông tin trong chính dữ liệu được phân cụm. Các độ đo nội tại phổ biến bao gồm:
+  - Sum of Squared Errors (SSE): Đây là tổng bình phương khoảng cách giữa các điểm dữ liệu và trung tâm của cụm của chúng. SSE càng nhỏ thì cụm càng tốt.
+  - Silhouette Coefficient: Độ đo này tính toán độ tương đồng trong cụm và độ khác biệt giữa các cụm. Giá trị Silhouette Coefficient nằm trong khoảng từ -1 đến 1, với giá trị càng gần 1 thì phân cụm càng tốt.
+- Đánh giá ngoại tại (External evaluation): Phương pháp này so sánh kết quả phân cụm với một tập dữ liệu được gán nhãn trước đó. Các độ đo ngoại tại phổ biến bao gồm:
+  - Adjusted Rand Index (ARI): Đây là một độ đo đánh giá mức độ tương đồng giữa hai phân phối xác suất, một phân phối được xác định bởi kết quả phân cụm và một phân phối được xác định bởi nhãn đúng.
+  - Fowlkes-Mallows Index (FMI): Đây là một độ đo dựa trên độ chính xác và độ phủ của các cụm.
+- Đánh giá hướng bên ngoài (External evaluation): Phương pháp này yêu cầu sự can thiệp của người đánh giá hoặc chuyên gia. Các phương pháp này thường dựa trên so sánh kết quả phân cụm với những mong đợi được xác định trước hoặc đánh giá chất lượng dựa trên mục tiêu cụ thể của ứng dụng.
 
 ## Summary
+Các thuật toán phân cụm có thể được phân loại thành các phương pháp chia vùng, phương pháp phân cấp, phương pháp dựa trên mật độ, phương pháp dựa trên lưới và phương pháp dựa trên mô hình.
+
+Các thuật toán phân cụm dựa trên chia vùng phổ biến bao gồm K-means và K-medoids.
+
+Các thuật toán phân cụm phân cấp như Birch và Chameleon là những phương pháp phân cấp thú vị, và còn có các thuật toán phân cụm phân cấp xác suất.
+
+Các thuật toán dựa trên mật độ như DBSCAN, OPTICS và DENCLU cũng rất thú vị.
+
+STING và CLIQUE là các phương pháp dựa trên lưới, trong đó CLIQUE cũng là một thuật toán phân cụm không gian con.
+
+Chất lượng của kết quả phân cụm có thể được đánh giá theo nhiều cách khác nhau.
+
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/65508693-64e1-4106-8666-f50f5e572a93)
