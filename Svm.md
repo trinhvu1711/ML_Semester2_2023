@@ -114,6 +114,8 @@ Là một phương pháp trong tối ưu hóa được sử dụng để tìm c�
 ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/c983b195-5163-4206-8aa4-2175b35eca28)
 ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/9fc8b997-3e51-44a8-8bfc-f6a657c6d99e)
 
+## Soft-margin support vector machine
+
 Soft margin SVM
 Soft Margin SVM (Support Vector Machine) là một biến thể của SVM được sử dụng để xây dựng bộ phân loại có khả năng chấp nhận sự mất mát (vi phạm ràng buộc) trong quá trình tạo ra siêu phẳng tối ưu. Phương pháp này giúp SVM xử lý hiệu quả những tập dữ liệu có sự chồng chéo hoặc nhiễu.
 
@@ -125,7 +127,9 @@ Soft Margin SVM cho phép một số lượng nhất định các điểm dữ l
 
 Quá trình tối ưu hóa của Soft Margin SVM có thể được thực hiện bằng phương pháp tối ưu hóa bậc hai như phương pháp Lagrange Multipliers và SMO (Sequential Minimal Optimization).
 
-Kernel trick 
+## Kernel support vector machine
+
+Kernel trick
 Kernel Trick là một kỹ thuật được sử dụng trong Support Vector Machine (SVM) để mở rộng khả năng phân loại của SVM từ không gian đặc trưng ban đầu lên một không gian đặc trưng cao hơn, mà có thể giúp SVM xử lý hiệu quả các bài toán phân loại phi tuyến.
 
 Trong SVM, mục tiêu là tìm một siêu phẳng tuyến tính tối ưu để tách rời các điểm dữ liệu của các lớp khác nhau. Tuy nhiên, nếu dữ liệu không thể tách rời hoàn toàn bằng một siêu phẳng tuyến tính, SVM sẽ không hoạt động hiệu quả.
@@ -135,14 +139,18 @@ Kernel Trick giúp giải quyết vấn đề này bằng cách ánh xạ dữ l
 Kernel function tính toán một đại lượng gọi là độ tương tự (similarity measure) giữa hai điểm dữ liệu trong không gian đặc trưng cao hơn. Khi sử dụng kernel function, SVM có thể xử lý dữ liệu phi tuyến mà không cần thực hiện việc tăng số chiều của dữ liệu. Điều này giúp giảm độ phức tạp tính toán và tiết kiệm bộ nhớ.
 
 Một số kernel function phổ biến được sử dụng trong SVM bao gồm:
-- Linear Kernel: K(x, y) = x^T * y
-- Polynomial Kernel: K(x, y) = (x^T * y + c)^d
-- Gaussian (RBF) Kernel: K(x, y) = exp(-||x - y||^2 / (2 * sigma^2))
+
+- Linear Kernel: K(x, y) = x^T \* y
+- Polynomial Kernel: K(x, y) = (x^T \* y + c)^d
+- Gaussian (RBF) Kernel: K(x, y) = exp(-||x - y||^2 / (2 \* sigma^2))
+
+## Multi-class support vector machine
 
 Multi-class SVM
 Multi-Class SVM (Support Vector Machine) là một biến thể của SVM được sử dụng để xây dựng mô hình phân loại cho các bài toán có nhiều hơn hai lớp dữ liệu. Trong SVM truyền thống, chỉ có thể xử lý bài toán phân loại nhị phân, trong đó dữ liệu được chia thành hai lớp. Tuy nhiên, với Multi-Class SVM, chúng ta có thể xử lý bài toán phân loại đa lớp, trong đó dữ liệu được chia thành ba lớp trở lên.
 
 Có hai phương pháp chính để xây dựng một Multi-Class SVM: One-vs-One và One-vs-All (One-vs-Rest).
+
 - One-vs-One (OvO): Trong phương pháp này, mỗi cặp lớp dữ liệu được chọn để tạo thành một bài toán phân loại nhị phân riêng biệt. Ví dụ, nếu chúng ta có k lớp dữ liệu, thì chúng ta sẽ tạo ra k(k-1)/2 bài toán phân loại nhị phân. Mỗi bài toán phân loại sẽ xác định xem một điểm dữ liệu thuộc lớp nào trong hai lớp được chọn. Kết quả của tất cả các bài toán phân loại sẽ được tổng hợp để quyết định lớp cuối cùng của điểm dữ liệu.
 
 - One-vs-All (OvA hoặc OvR): Trong phương pháp này, mỗi lớp dữ liệu được chọn để tạo thành một bài toán phân loại nhị phân riêng biệt. Với mỗi bài toán phân loại, lớp được chọn được coi là lớp dương và các lớp khác được coi là lớp âm. Kết quả của tất cả các bài toán phân loại sẽ được đưa ra và lớp có điểm cao nhất sẽ được chọn là lớp cuối cùng của điểm dữ liệu.
@@ -151,9 +159,10 @@ Tổng kết:
 SVMs find optimal linear separator
 Kernel Trick giúp SVM học các bề mặt quyết định phi tuyến.
 Ưu điểm của SVM:
+
 - Hiệu suất lý thuyết và thực nghiệm tốt.
 - Hỗ trợ nhiều loại kernel khác nhau.
-Nhược điểm của SVM:
+  Nhược điểm của SVM:
 - Tốn thời gian huấn luyện và dự đoán đối với các tập dữ liệu lớn (tuy nhiên, vẫn nhanh so với một số phương pháp khác).
 - Lần chọn kernel (và điều chỉnh các tham số của nó).
 
@@ -164,6 +173,7 @@ Một bài toán phân loại thường bao gồm hai phần chính: dữ liệu
 
 Phân chia dựa trên Base Classifiers và Ensemble Classifiers là hai cách tiếp cận khác nhau trong việc xây dựng các mô hình phân loại.
 Base Classifiers (Bộ phân loại cơ bản): Các Base Classifiers là các mô hình phân loại đơn lẻ độc lập với nhau. Mỗi bộ phân loại cơ bản được huấn luyện trên một tập dữ liệu con hoặc trên toàn bộ tập dữ liệu gốc. Các bộ phân loại cơ bản này có thể là các thuật toán phân loại đơn giản như Logistic Regression, Decision Trees, Support Vector Machines, Naive Bayes, Neural Networks và nhiều thuật toán khác.
+
 - Hồi quy Logistic (Logistic Regression): Đây là một mô hình tuyến tính được sử dụng cho phân loại nhị phân. Mô hình này mô phỏng xác suất của một điểm dữ liệu thuộc về một lớp cụ thể bằng cách sử dụng hàm logistic.
 
 - Cây quyết định (Decision Trees): Đây là các mô hình phân loại có cấu trúc phân cấp dựa trên một chuỗi các quy tắc. Mỗi nút trong cây biểu thị một kiểm tra trên một đặc trưng, và mỗi nút lá biểu thị một nhãn lớp.
@@ -179,6 +189,7 @@ Base Classifiers (Bộ phân loại cơ bản): Các Base Classifiers là các m
 - Mạng neural (Neural Networks): Đây là một lớp mô hình được lấy cảm hứng từ não người, gồm các nút hoặc "neuron" được kết nối với nhau. Mạng neural có thể xử lý các mẫu và mối quan hệ phức tạp trong dữ liệu, và được sử dụng rộng rãi trong các bài toán phân loại.
 
 Ensemble Classifiers (Bộ phân loại tổ hợp): Ensemble Classifiers kết hợp các Base Classifiers lại với nhau để tạo thành một mô hình phân loại mạnh hơn. Các phương pháp Ensemble phổ biến bao gồm:
+
 - Voting: Các Base Classifiers đưa ra dự đoán riêng lẻ và dự đoán cuối cùng được xác định dựa trên đa số phiếu bầu từ các bộ phân loại cơ bản. Voting có thể được thực hiện theo hai hình thức: Hard Voting (phiếu bầu cứng) và Soft Voting (phiếu bầu mềm).
 
 - Bagging: Các Base Classifiers được huấn luyện trên các tập dữ liệu con được chọn ngẫu nhiên từ tập dữ liệu huấn luyện gốc. Kết quả dự đoán cuối cùng được tính bằng cách kết hợp các dự đoán từ các bộ phân loại cơ bản, thường là bằng cách lấy trung bình hoặc phiếu bầu.
@@ -189,22 +200,19 @@ Ensemble Classifiers (Bộ phân loại tổ hợp): Ensemble Classifiers kết 
 
 Bayes Classification methods
 Các phương pháp phân loại Bayes là một họ các kỹ thuật phân loại dựa trên lý thuyết xác suất Bayes. Những phương pháp này sử dụng các mô hình xác suất để đưa ra dự đoán và gán nhãn lớp cho dữ liệu đầu vào. Dưới đây là một số phương pháp phân loại Bayes phổ biến:
+
 - Bộ phân loại Naive Bayes: Naive Bayes là một thuật toán phân loại đơn giản và nhanh chóng. Nó giả định rằng tất cả các đặc trưng là độc lập với nhau khi đã biết nhãn lớp, do đó có tên "naive". Nó tính toán xác suất hậu nghiệm của mỗi lớp dựa trên các đặc trưng đầu vào bằng cách sử dụng định lý Bayes và chọn lớp có xác suất cao nhất.
 - Mạng tin cậy Bayes: Mạng tin cậy Bayes, còn được gọi là mạng Bayes hoặc mô hình đồ thị, biểu diễn các phụ thuộc giữa các biến bằng cách sử dụng một đồ thị có hướng không có chu trình. Các mạng này được sử dụng để mô hình hóa mối quan hệ phức tạp và không chắc chắn trong dữ liệu. Chúng có thể được sử dụng cho cả các nhiệm vụ phân loại và suy luận.
 - Hồi quy logistic Bayes: Hồi quy logistic Bayes mở rộng hồi quy logistic truyền thống bằng cách tích hợp phân phối tiên nghiệm vào các tham số của mô hình. Điều này cung cấp một cách để tích hợp tri thức tiên nghiệm hoặc niềm tin về các tham số vào quá trình phân loại. Hồi quy logistic Bayes có thể xử lý cả các bài toán phân loại nhị phân và phân loại đa lớp.
 - Cây quyết định Bayes: Cây quyết định Bayes kết hợp nguyên tắc của cây quyết định với suy luận Bayes. Chúng sử dụng cấu trúc cây quyết định để phân chia dữ liệu theo các giá trị đặc trưng và tính toán xác suất hậu nghiệm của các nhãn lớp tại mỗi nút. Phương pháp này cho phép mô hình hóa không chắc chắn một cách rõ ràng và có thể hữu ích khi làm việc với dữ liệu nhỏ hoặc nhiễu.
 - Naive Bayes Gaussian: Naive Bayes Gaussian là một biến thể của bộ phân loại Naive Bayes giả định rằng các đặc trưng tuân theo phân phối Gaussian (chuẩn). Nó hoạt động tốt cho các đặc trưng liên tục hoặc có giá trị thực. Nó ước tính trung bình và phương sai của mỗi đặc trưng cho mỗi lớp và sử dụng chúng để tính toán xác suất và xác suất hậu nghiệm.
-![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/db9ff8ef-8e11-4578-9137-2f7044e737d1)
-![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/bf5f4c77-c602-4071-8eae-86c686d49280)
-![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/e35725d7-525f-4f33-bc0c-c41334610bb2)
-![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/9645e5ba-4375-4222-bb77-29f54f57656b)
-![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/5e944cf6-9351-4b95-acd2-90f0c7eee377)
-![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/bfd941eb-f8dd-4b8e-9f58-1c0952e0f146)
-![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/f3b4e09e-0822-4aca-8c7d-b7afd399253b)
-![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/bf620c0e-e9df-4bdd-b27d-7aa8acc6255b)
-![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/982eae53-2e16-49d7-acda-7f109c89aca0)
-![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/a50545a9-13d8-4ef5-8b16-1dbbbdc88b81)
-
-
-
-
+  ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/db9ff8ef-8e11-4578-9137-2f7044e737d1)
+  ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/bf5f4c77-c602-4071-8eae-86c686d49280)
+  ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/e35725d7-525f-4f33-bc0c-c41334610bb2)
+  ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/9645e5ba-4375-4222-bb77-29f54f57656b)
+  ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/5e944cf6-9351-4b95-acd2-90f0c7eee377)
+  ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/bfd941eb-f8dd-4b8e-9f58-1c0952e0f146)
+  ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/f3b4e09e-0822-4aca-8c7d-b7afd399253b)
+  ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/bf620c0e-e9df-4bdd-b27d-7aa8acc6255b)
+  ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/982eae53-2e16-49d7-acda-7f109c89aca0)
+  ![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/a50545a9-13d8-4ef5-8b16-1dbbbdc88b81)

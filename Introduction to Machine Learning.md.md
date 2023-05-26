@@ -34,18 +34,6 @@ Các thuật toán machine learning phổ biến bao gồm:
 
 - Triển khai mô hình: Sau khi mô hình đã đạt được hiệu suất tốt, nó có thể được triển khai để sử dụng trong ứng dụng thực tế. Điều này có thể bao gồm việc tích hợp mô hình vào hệ thống hiện có hoặc phát triển các ứng dụng và dịch vụ mới.
 
-## 4. Clustering
-
-Phân cụm (Clustering) là một phương pháp trong machine learning (học máy) được sử dụng để nhóm các điểm dữ liệu có tính chất tương đồng lại với nhau. Mục tiêu của phân cụm là tìm ra cấu trúc ẩn trong dữ liệu mà không cần có nhãn hay thông tin trước.
-
-Trong phân cụm, chúng ta xem xét các điểm dữ liệu và cố gắng tìm ra cách chia chúng thành các nhóm (clusters) dựa trên mức độ tương đồng giữa chúng. Mỗi nhóm sẽ chứa các điểm dữ liệu có sự tương đồng cao với nhau, trong khi giữa các nhóm thì có sự khác biệt.
-
-Có nhiều phương pháp phân cụm khác nhau, nhưng hai phương pháp phân cụm phổ biến là K-Means và Hierarchical Clustering. Trong K-Means, chúng ta chọn một số lượng K centroid ban đầu, sau đó lặp lại quá trình gán điểm vào cluster và cập nhật centroid cho đến khi sự hội tụ. Hierarchical Clustering xây dựng các cấu trúc phân cấp dựa trên sự tương đồng giữa các điểm dữ liệu, bắt đầu từ việc mỗi điểm là một cluster riêng và sau đó kết hợp các cluster lại với nhau dựa trên mức độ tương đồng.
-
-Các phương pháp phân cụm có thể được đánh giá bằng cách sử dụng các độ đo như Silhouette coefficient hoặc Index Dunn để đo lường mức độ phân cụm tốt.
-
-Phân cụm là một công cụ hữu ích trong machine learning và được áp dụng trong nhiều lĩnh vực như phân loại hình ảnh, phân loại văn bản, phân tích khách hàng và nhiều ứng dụng khác. Nó giúp chúng ta hiểu rõ hơn về cấu trúc dữ liệu và khám phá thông tin ẩn chưa được biết đến trước đó.
-
 ## 5. Neural networks
 
 Mạng neural (Neural networks) là một thuật toán trong lĩnh vực machine learning (học máy) được lấy cảm hứng từ cách hoạt động của hệ thống thần kinh sinh học. Mạng neural được sử dụng để học và nhận biết các mô hình phức tạp từ dữ liệu đầu vào.
