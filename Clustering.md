@@ -90,6 +90,11 @@ Có một số giải pháp để khắc phục vấn đề với việc chọn 
 - Phương pháp chọn trung tâm từ dữ liệu đại diện: Một phương pháp khác là chọn trung tâm ban đầu từ các điểm dữ liệu đại diện trong tập dữ liệu. Có thể sử dụng các phương pháp phân cụm trước đó như phân cụm hiển thị (hierarchical clustering) hoặc phân cụm GMM (Gaussian Mixture Model) để chọn một số điểm dữ liệu đại diện và sử dụng chúng làm điểm khởi tạo ban đầu.
 
 - Chọn trung tâm ban đầu theo kiến thức chuyên gia: Trong một số trường hợp, kiến thức chuyên gia về dữ liệu có thể được sử dụng để chọn các điểm khởi tạo ban đầu. Kiến thức này có thể bao gồm các thông tin về cấu trúc dữ liệu, nhãn, hoặc đặc trưng quan trọng. Bằng cách sử dụng kiến thức này, có thể chọn các điểm khởi tạo ban đầu gần với các trung tâm dự kiến của các cụm hoặc đại diện cho các đặc trưng quan trọng của dữ liệu.
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/075f21c6-3975-4d57-9b44-cad0f1d188e0)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/82be6fe4-e569-4006-9f9a-6e7ec05dedcd)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/c6e1cc02-b29a-4649-86f9-fe281955414e)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/b3d38c56-c813-4888-b0d1-c060381341c6)
+![image](https://github.com/trinhvu1711/ML_Semester2_2023/assets/81180330/73a2cee8-e8bb-45f3-840d-9d17f16574d2)
 
 ## Hierarchical Methods
 
