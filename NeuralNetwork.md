@@ -243,3 +243,45 @@ Trong đó:
 H là kích thước đầu vào trong chiều cao.
 Số kênh đầu ra (C') của lớp tích chập:
 C' là số lượng bộ lọc được áp dụng trong lớp tích chập.
+
+### Pooling layer
+Pooling layer (lớp gộp) là một thành phần quan trọng trong Convolutional Neural Network (CNN). Lớp gộp được sử dụng để giảm kích thước không gian của đầu vào, giữ lại thông tin quan trọng và giảm độ phức tạp tính toán.
+
+Lớp gộp hoạt động bằng cách áp dụng một phép gộp lên các vùng không gian của dữ liệu đầu vào. Phép gộp thường là phép lấy giá trị lớn nhất (max pooling) hoặc phép lấy giá trị trung bình (average pooling) của các giá trị trong vùng.
+
+Khi áp dụng max pooling, lớp gộp chia dữ liệu đầu vào thành các vùng không chồng lên nhau và chọn giá trị lớn nhất trong mỗi vùng làm giá trị đại diện. Điều này giúp giữ lại thông tin quan trọng và đặc trưng nổi bật trong dữ liệu.
+
+Khi áp dụng average pooling, lớp gộp tính giá trị trung bình của các giá trị trong mỗi vùng và sử dụng giá trị này làm giá trị đại diện cho vùng. Điều này giúp giảm độ phức tạp tính toán và làm mờ các đặc trưng cục bộ.
+
+Lớp gộp thường được áp dụng sau các lớp tích chập trong CNN. Việc sử dụng lớp gộp giúp giảm kích thước không gian của đầu vào, làm giảm số lượng tham số và tính toán, và tạo ra một biểu diễn tổng quát hơn cho các đặc trưng. Điều này giúp cải thiện tính tổng quát và ổn định của mô hình.
+
+### Type of pooling layer
+Có hai loại phổ biến của lớp gộp (pooling layer) trong Convolutional Neural Network (CNN):
+
+- Max Pooling: Max pooling là phép gộp thông qua việc chọn giá trị lớn nhất từ một vùng không gian nhất định trong feature map. Phép gộp này giữ lại thông tin quan trọng nhất và giúp giảm kích thước của feature map. Vùng gộp thường có kích thước và bước đi (stride) được chỉ định trước. Max pooling thường được sử dụng để tìm ra các đặc trưng nổi bật trong ảnh.
+
+- Average Pooling: Average pooling là phép gộp thông qua việc tính trung bình của các giá trị trong một vùng không gian nhất định trong feature map. Phép gộp này tính trung bình các giá trị và giúp giảm độ phức tạp của mạng. Average pooling thường được sử dụng để làm mờ các đặc trưng cục bộ và tạo ra biểu diễn tổng quát hơn cho ảnh.
+
+### Summary on CNN
+Convolutional Neural Network (CNN) là một mạng nơ-ron nhân tạo được sử dụng phổ biến trong xử lý ảnh và nhận dạng đối tượng. CNN được thiết kế dựa trên cấu trúc và cách hoạt động của thị giác con người.
+
+Các thành phần chính trong CNN bao gồm lớp tích chập (convolutional layer), lớp gộp (pooling layer), và lớp kết nối đầy đủ (fully connected layer).
+
+Lớp tích chập áp dụng các bộ lọc (filter) trên đầu vào để tạo ra các đặc trưng cục bộ. Bằng cách trượt bộ lọc trên toàn bộ đầu vào, các kết quả tích chập được tạo ra, gọi là feature map, chứa thông tin về các đặc trưng cục bộ của hình ảnh.
+
+Lớp gộp được sử dụng để giảm kích thước không gian của feature map. Phép gộp (max pooling hoặc average pooling) được áp dụng để lấy thông tin quan trọng từ các vùng không gian và tạo ra các feature map có kích thước nhỏ hơn.
+
+Sau các lớp tích chập và gộp, thông tin được truyền vào lớp kết nối đầy đủ để thực hiện việc phân loại. Lớp kết nối đầy đủ gồm các nơ-ron liên kết tất cả các đặc trưng để dự đoán đầu ra.
+
+Quá trình huấn luyện của CNN bao gồm quá trình lan truyền thuận (forward propagation) để tính toán đầu ra dựa trên các tham số mạng, và quá trình lan truyền ngược (backpropagation) để điều chỉnh các tham số mạng dựa trên độ lỗi.
+
+CNN đã đạt được kết quả ấn tượng trong nhiều bài toán như nhận dạng ảnh, phân loại đối tượng, nhận dạng khuôn mặt và nhận dạng chữ viết tay. Với cấu trúc và khả năng học tự động của nó, CNN là một công cụ mạnh mẽ trong xử lý ảnh và trí tuệ nhân tạo.
+
+### Popular neural networks
+Popular network architectures
+- LeNet
+- AlexNet
+- VGG16
+- Inception v1, v3
+- ResNet-50
+- MobileNe
