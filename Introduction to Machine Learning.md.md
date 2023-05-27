@@ -34,20 +34,6 @@ Các thuật toán machine learning phổ biến bao gồm:
 
 - Triển khai mô hình: Sau khi mô hình đã đạt được hiệu suất tốt, nó có thể được triển khai để sử dụng trong ứng dụng thực tế. Điều này có thể bao gồm việc tích hợp mô hình vào hệ thống hiện có hoặc phát triển các ứng dụng và dịch vụ mới.
 
-## 5. Neural networks
-
-Mạng neural (Neural networks) là một thuật toán trong lĩnh vực machine learning (học máy) được lấy cảm hứng từ cách hoạt động của hệ thống thần kinh sinh học. Mạng neural được sử dụng để học và nhận biết các mô hình phức tạp từ dữ liệu đầu vào.
-
-Một mạng neural bao gồm các "neuron" nhân tạo được tổ chức thành các lớp (layers). Các lớp này kết nối với nhau thông qua các trọng số, và thông tin được truyền từ lớp đầu vào (input layer) qua các lớp ẩn (hidden layers) đến lớp đầu ra (output layer). Mỗi neuron tính toán đầu ra dựa trên tổ hợp tuyến tính của đầu vào và hàm kích hoạt phi tuyến (non-linear activation function).
-
-Quá trình huấn luyện mạng neural bao gồm việc điều chỉnh các trọng số của mạng để tối thiểu hóa sai số giữa kết quả dự đoán và kết quả thực tế. Các phương pháp tối ưu hóa như Gradient Descent và Backpropagation thường được sử dụng để cập nhật trọng số.
-
-Mạng neural có thể có kiến trúc đơn giản với chỉ một lớp ẩn hoặc kiến trúc phức tạp với nhiều lớp ẩn. Một số kiến trúc mạng neural phổ biến bao gồm mạng neural truyền thẳng (feedforward neural network), mạng neural hồi quy (recurrent neural network), và mạng neural chập (convolutional neural network).
-
-Mạng neural có khả năng học và nhận biết các mô hình phức tạp, như phân loại hình ảnh, nhận dạng giọng nói, dịch máy và nhiều bài toán khác. Đánh giá hiệu suất của mạng neural thường được thực hiện bằng cách sử dụng các độ đo như độ chính xác (accuracy), độ mất mát (loss) và ma trận lỗi (confusion matrix).
-
-Mạng neural đã trở thành một công cụ quan trọng trong lĩnh vực machine learning, và sự phát triển của các kiến trúc và thuật toán mới đã đóng góp đáng kể vào sự tiến bộ của lĩnh vực này.
-
 ## Kiến thức tổng quát về ML + ứng dụng
 
 Một số khái niệm quan trọng trong ML bao gồm:
